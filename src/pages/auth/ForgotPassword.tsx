@@ -20,10 +20,10 @@ export default function ForgotPassword() {
         </FormGroup>
         <div className="flex items-center justify-center">
           <div className="flex flex-col basis-[80%]">
-            <Button>Submit</Button>
+            <Button el="button">Submit</Button>
           </div>
         </div>
-        <p className="text-center mt-3">Already have an account? <Link to="/" className="underline text-[var(--blue-200)]">Login</Link></p>
+        <p className="text-center mt-3 dark:text-gray-400">Already have an account? <Link to="/" className="underline text-[var(--blue-200)]">Login</Link></p>
       </form>
     </>
   );
