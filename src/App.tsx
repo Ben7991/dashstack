@@ -5,6 +5,7 @@ import AuthLayout from "./components/layouts/AuthLayout";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import ForgotPassword from "./pages/auth/ForgotPassword";
+import ThemeContextProvider from "./lib/context/theme/ThemeContextProvider";
 
 export default function App() {
   const appRouter = createBrowserRouter([
@@ -20,5 +21,9 @@ export default function App() {
     }
   ]);
 
-  return <RouterProvider router={appRouter} />
+  return (
+    <ThemeContextProvider>
+      <RouterProvider router={appRouter} />
+    </ThemeContextProvider>
+  );
 }
